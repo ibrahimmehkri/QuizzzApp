@@ -8,24 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		AB60147E2151E5CF001D700D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB60147D2151E5CF001D700D /* AppDelegate.m */; };
-		AB6014812151E5CF001D700D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6014802151E5CF001D700D /* ViewController.m */; };
 		AB6014842151E5CF001D700D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6014822151E5CF001D700D /* Main.storyboard */; };
 		AB6014862151E5D1001D700D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6014852151E5D1001D700D /* Assets.xcassets */; };
 		AB6014892151E5D1001D700D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6014872151E5D1001D700D /* LaunchScreen.storyboard */; };
 		AB60148C2151E5D1001D700D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB60148B2151E5D1001D700D /* main.m */; };
+		ABD920372156815C00E24D68 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD920362156815C00E24D68 /* Question.m */; };
+		ABD9203A2156896100E24D68 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD920392156896100E24D68 /* GameViewController.m */; };
+		ABF6DB46215671E000DF4D97 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF6DB45215671E000DF4D97 /* ResultViewController.m */; };
+		ABF6DB492156721F00DF4D97 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF6DB482156721F00DF4D97 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB6014792151E5CF001D700D /* QuizzzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60147C2151E5CF001D700D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB60147D2151E5CF001D700D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AB60147F2151E5CF001D700D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AB6014802151E5CF001D700D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AB6014832151E5CF001D700D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB6014852151E5D1001D700D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB6014882151E5D1001D700D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB60148A2151E5D1001D700D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB60148B2151E5D1001D700D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABD920352156815C00E24D68 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		ABD920362156815C00E24D68 /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		ABD920382156896100E24D68 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		ABD920392156896100E24D68 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		ABF6DB44215671E000DF4D97 /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		ABF6DB45215671E000DF4D97 /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		ABF6DB472156721F00DF4D97 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		ABF6DB482156721F00DF4D97 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,10 @@
 		AB60147B2151E5CF001D700D /* QuizzzApp */ = {
 			isa = PBXGroup;
 			children = (
+				ABD920282156794800E24D68 /* Data */,
+				ABF6DB40215671A200DF4D97 /* Quiz  */,
 				AB60147C2151E5CF001D700D /* AppDelegate.h */,
 				AB60147D2151E5CF001D700D /* AppDelegate.m */,
-				AB60147F2151E5CF001D700D /* ViewController.h */,
-				AB6014802151E5CF001D700D /* ViewController.m */,
 				AB6014822151E5CF001D700D /* Main.storyboard */,
 				AB6014852151E5D1001D700D /* Assets.xcassets */,
 				AB6014872151E5D1001D700D /* LaunchScreen.storyboard */,
@@ -69,6 +78,28 @@
 				AB60148B2151E5D1001D700D /* main.m */,
 			);
 			path = QuizzzApp;
+			sourceTree = "<group>";
+		};
+		ABD920282156794800E24D68 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ABD920352156815C00E24D68 /* Question.h */,
+				ABD920362156815C00E24D68 /* Question.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		ABF6DB40215671A200DF4D97 /* Quiz  */ = {
+			isa = PBXGroup;
+			children = (
+				ABF6DB44215671E000DF4D97 /* ResultViewController.h */,
+				ABF6DB45215671E000DF4D97 /* ResultViewController.m */,
+				ABF6DB472156721F00DF4D97 /* HomeViewController.h */,
+				ABF6DB482156721F00DF4D97 /* HomeViewController.m */,
+				ABD920382156896100E24D68 /* GameViewController.h */,
+				ABD920392156896100E24D68 /* GameViewController.m */,
+			);
+			path = "Quiz ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6014812151E5CF001D700D /* ViewController.m in Sources */,
 				AB60148C2151E5D1001D700D /* main.m in Sources */,
 				AB60147E2151E5CF001D700D /* AppDelegate.m in Sources */,
+				ABD920372156815C00E24D68 /* Question.m in Sources */,
+				ABF6DB46215671E000DF4D97 /* ResultViewController.m in Sources */,
+				ABD9203A2156896100E24D68 /* GameViewController.m in Sources */,
+				ABF6DB492156721F00DF4D97 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
