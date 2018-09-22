@@ -39,19 +39,19 @@
     
     self.iterator = 0;
 
-    Question *q1 = [[Question alloc]initWithText:@"question 1"
-                                   correctAnswer:@"a"
-                                    alternatives:@[@"b",@"c"]];
+    Question *q1 = [[Question alloc]initWithText:@"Who is the founder of Next?"
+                                   correctAnswer:@"Steve Jobs"
+                                    alternatives:@[@"Tim Cook",@"Aditya Punjiani"]];
     [self.questions addObject:q1];
     
-    Question *q2 = [[Question alloc]initWithText:@"question 2"
-                                   correctAnswer:@"a"
-                                    alternatives:@[@"b", @"c"]];
+    Question *q2 = [[Question alloc]initWithText:@"Who built React?"
+                                   correctAnswer:@"Facebook"
+                                    alternatives:@[@"Amazon", @"Google"]];
     [self.questions addObject:q2];
     
-    Question *q3 = [[Question alloc]initWithText:@"question 3 "
-                                   correctAnswer:@"a"
-                                    alternatives:@[@"b", @"c"]];
+    Question *q3 = [[Question alloc]initWithText:@"Where is the factory of Koenigsegg in Sweden?"
+                                   correctAnswer:@"Ängelholm"
+                                    alternatives:@[@"Malmö", @"Gothenburg"]];
     [self.questions addObject:q3];
     
     [self prepareQuestion];
@@ -85,6 +85,27 @@
     
     self.qLabel.text = currentQuestion.text;
     
+    NSMutableArray *allAnswers = [@[]mutableCopy];
+    
+    [allAnswers addObject:currentQuestion.correctAnswer];
+    
+    for (NSString *alternative in currentQuestion.alternatives) {
+        [allAnswers addObject:alternative];
+    }
+    
+    [self prepareOptions:allAnswers];
+    
+}
+
+-(void)prepareOptions:(NSMutableArray *)options{
+    for (NSUInteger i = (options.count - 1); i > 0; i--) {
+        NSUInteger j = arc4random_uniform(i + 1);
+        [options exchangeObjectAtIndex:i withObjectAtIndex:j];
+    }
+    
+    self.a1Label.text = options[0];
+    self.a2Label.text = options[1];
+    self.a3Label.text = options[2];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
