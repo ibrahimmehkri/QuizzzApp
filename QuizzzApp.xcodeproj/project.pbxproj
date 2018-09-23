@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB24B9EC2157D47D00245E8A /* QuestionList.m in Sources */ = {isa = PBXBuildFile; fileRef = AB24B9EB2157D47D00245E8A /* QuestionList.m */; };
 		AB60147E2151E5CF001D700D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB60147D2151E5CF001D700D /* AppDelegate.m */; };
 		AB6014842151E5CF001D700D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6014822151E5CF001D700D /* Main.storyboard */; };
 		AB6014862151E5D1001D700D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6014852151E5D1001D700D /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB24B9EA2157D47D00245E8A /* QuestionList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionList.h; sourceTree = "<group>"; };
+		AB24B9EB2157D47D00245E8A /* QuestionList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionList.m; sourceTree = "<group>"; };
 		AB6014792151E5CF001D700D /* QuizzzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB60147C2151E5CF001D700D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB60147D2151E5CF001D700D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 			children = (
 				ABD920352156815C00E24D68 /* Question.h */,
 				ABD920362156815C00E24D68 /* Question.m */,
+				AB24B9EA2157D47D00245E8A /* QuestionList.h */,
+				AB24B9EB2157D47D00245E8A /* QuestionList.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB24B9EC2157D47D00245E8A /* QuestionList.m in Sources */,
 				AB60148C2151E5D1001D700D /* main.m in Sources */,
 				AB60147E2151E5CF001D700D /* AppDelegate.m in Sources */,
 				ABD920372156815C00E24D68 /* Question.m in Sources */,
