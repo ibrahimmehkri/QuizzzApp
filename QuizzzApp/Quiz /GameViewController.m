@@ -60,6 +60,8 @@
 }
 
 - (IBAction)handleClick:(id)sender {
+    [self refreshLabelInteractivity]; 
+    
     self.resultLabel.text = @""; 
     
     [self prepareQuestion];
@@ -128,6 +130,18 @@
     }
 }
 
+-(void)stopFurtherSelection{
+    [self.a1Label setUserInteractionEnabled:NO];
+    [self.a2Label setUserInteractionEnabled:NO];
+    [self.a3Label setUserInteractionEnabled:NO];
+}
+
+-(void)refreshLabelInteractivity{
+    [self.a1Label setUserInteractionEnabled:YES];
+    [self.a2Label setUserInteractionEnabled:YES];
+    [self.a3Label setUserInteractionEnabled:YES];
+}
+
 -(void)tapAction:(UITapGestureRecognizer*)sender{
     UILabel *label = sender.view;
    
@@ -138,6 +152,8 @@
         self.numberOfCorrectAnswers++;
         
         NSLog(@"%i", self.numberOfCorrectAnswers);
+        
+        [self stopFurtherSelection];
     
     } else {
     
