@@ -20,4 +20,8 @@
     return self; 
 }
 
+-(BOOL)isCorrect:(NSString *)answer{
+    return [self.correctAnswer isEqualToString:answer]; 
+}
+
 @end

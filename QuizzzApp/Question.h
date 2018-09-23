@@ -15,7 +15,9 @@
 @property NSString *correctAnswer;
 @property NSArray *alternatives;
 
--(instancetype)initWithText:(NSString*)text correctAnswer:(NSString*)answer alternatives:(NSArray*)alt; 
+-(instancetype)initWithText:(NSString*)text correctAnswer:(NSString*)answer alternatives:(NSArray*)alt;
+
+-(BOOL)isCorrect:(NSString*)answer; 
 
 @end
 

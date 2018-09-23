@@ -16,8 +16,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *a1Label;
 @property (weak, nonatomic) IBOutlet UILabel *a2Label;
 @property (weak, nonatomic) IBOutlet UILabel *a3Label;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 
+@property Question *activeQuestion;
+@property int numberOfCorrectAnswers;
 
 @property int iterator;
 
@@ -29,11 +32,26 @@
     
     [super viewDidLoad];
     
+    [self setUpLabel:self.a1Label];
+    [self setUpLabel:self.a2Label];
+    [self setUpLabel:self.a3Label];
+    
     [self loadInitialData];
 
 }
 
+-(void)setUpLabel:(UILabel*)option{
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    
+    [option setUserInteractionEnabled:YES];
+    [option addGestureRecognizer:gestureRecognizer];
+    
+}
+
 -(void)loadInitialData{
+    
+    self.numberOfCorrectAnswers = 0;
     
     self.iterator = 0;
 
@@ -42,6 +60,7 @@
 }
 
 - (IBAction)handleClick:(id)sender {
+    self.resultLabel.text = @""; 
     
     [self prepareQuestion];
     
@@ -66,6 +85,8 @@
     
     Question *currentQuestion = self.questions[iteratorValue];
     
+    self.activeQuestion = self.questions[iteratorValue];
+    
     self.qLabel.text = currentQuestion.text;
     
     NSMutableArray *allAnswers = [@[]mutableCopy];
@@ -82,12 +103,16 @@
 
 -(void)prepareOptions:(NSMutableArray *)options{
     for (NSUInteger i = (options.count - 1); i > 0; i--) {
+     
         NSUInteger j = arc4random_uniform(i + 1);
+        
         [options exchangeObjectAtIndex:i withObjectAtIndex:j];
     }
     
     self.a1Label.text = options[0];
+   
     self.a2Label.text = options[1];
+    
     self.a3Label.text = options[2];
 }
 
@@ -99,10 +124,26 @@
     
         ResultViewController *destination = [segue destinationViewController];
         
-        destination.result = [NSString stringWithFormat:@"hello world!"];
+        destination.result = [NSString stringWithFormat:@"Result: %i/3", self.numberOfCorrectAnswers];
     }
 }
 
-
+-(void)tapAction:(UITapGestureRecognizer*)sender{
+    UILabel *label = sender.view;
+   
+    if([self.activeQuestion isCorrect:label.text]){
+    
+        self.resultLabel.text = @"Correct!";
+        
+        self.numberOfCorrectAnswers++;
+        
+        NSLog(@"%i", self.numberOfCorrectAnswers);
+    
+    } else {
+    
+        self.resultLabel.text = @"Wrong!";
+    
+    }
+}
 
 @end

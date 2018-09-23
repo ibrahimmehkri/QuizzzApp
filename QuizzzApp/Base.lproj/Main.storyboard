@@ -146,7 +146,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKj-9j-Mdp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKj-9j-Mdp">
                                 <rect key="frame" x="16" y="416" width="204" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -198,6 +198,7 @@
                         <outlet property="a2Label" destination="3b6-6i-rXe" id="6eb-Mv-zvb"/>
                         <outlet property="a3Label" destination="Tm6-c7-lTd" id="k5m-Fx-h9r"/>
                         <outlet property="qLabel" destination="f0z-qV-AfD" id="Ofq-4k-H46"/>
+                        <outlet property="resultLabel" destination="JKj-9j-Mdp" id="VmV-hP-lIM"/>
                         <segue destination="TV6-lq-NKN" kind="presentation" identifier="Results" id="2jh-8F-AGF"/>
                     </connections>
                 </viewController>
