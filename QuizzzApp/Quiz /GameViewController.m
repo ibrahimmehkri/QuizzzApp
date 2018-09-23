@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *a2Label;
 @property (weak, nonatomic) IBOutlet UILabel *a3Label;
 
-@property NSMutableArray *questions;
+
 
 @property int iterator;
 
@@ -29,8 +29,6 @@
     
     [super viewDidLoad];
     
-    self.questions = [[NSMutableArray alloc]init];
-    
     [self loadInitialData];
 
 }
@@ -39,21 +37,6 @@
     
     self.iterator = 0;
 
-    Question *q1 = [[Question alloc]initWithText:@"Who is the founder of Next?"
-                                   correctAnswer:@"Steve Jobs"
-                                    alternatives:@[@"Tim Cook",@"Aditya Punjiani"]];
-    [self.questions addObject:q1];
-    
-    Question *q2 = [[Question alloc]initWithText:@"Who built React?"
-                                   correctAnswer:@"Facebook"
-                                    alternatives:@[@"Amazon", @"Google"]];
-    [self.questions addObject:q2];
-    
-    Question *q3 = [[Question alloc]initWithText:@"Where is the factory of Koenigsegg in Sweden?"
-                                   correctAnswer:@"Ängelholm"
-                                    alternatives:@[@"Malmö", @"Gothenburg"]];
-    [self.questions addObject:q3];
-    
     [self prepareQuestion];
     
 }

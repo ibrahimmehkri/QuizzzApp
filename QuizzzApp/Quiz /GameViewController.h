@@ -10,6 +10,8 @@
 
 @interface GameViewController : UIViewController
 
+@property NSMutableArray *questions; 
+
 @end
 
 

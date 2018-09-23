@@ -26,6 +26,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Movies"/>
+                                <connections>
+                                    <action selector="toGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytH-j9-sfg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7M-Xw-Kvh">
                                 <rect key="frame" x="16" y="364" width="343" height="48"/>
@@ -37,6 +40,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Art"/>
+                                <connections>
+                                    <action selector="toGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH2-CQ-Nj7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPm-vS-NTU">
                                 <rect key="frame" x="13" y="218" width="343" height="48"/>
@@ -46,9 +52,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Food"/>
+                                <state key="normal" title="Tech"/>
                                 <connections>
-                                    <segue destination="jEW-3j-UZc" kind="showDetail" id="mGv-W8-Q0N"/>
+                                    <action selector="toGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdx-Qg-aQs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuizzzApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-G6-d2M">
@@ -78,6 +84,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="artButton" destination="W7M-Xw-Kvh" id="Uim-cg-VX9"/>
+                        <outlet property="moviesButton" destination="lq2-kS-gc4" id="Lny-Lq-jJM"/>
+                        <outlet property="techButton" destination="gPm-vS-NTU" id="dM4-CC-HEe"/>
+                        <segue destination="jEW-3j-UZc" kind="showDetail" identifier="GameSegue" id="PUC-Jp-xZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
